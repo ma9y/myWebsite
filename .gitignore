@@ -1,0 +1,21 @@
+# Dependencies       
+node_modules
+
+# VS Code
+.history
+.vscode
+
+# Environment Variables
+.env
+
+# Eleventy output
+dist  
+
+# Other
+.DS_Store
+
+# Obsidian
+.obsidian
+
+# Images
+views/images/
