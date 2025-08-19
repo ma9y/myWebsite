@@ -1,6 +1,5 @@
 export default function (eleventyConfig) {
 
-    eleventyConfig.addPassthroughCopy("views/assets/css");
     eleventyConfig.addPassthroughCopy("views/assets/img");
     eleventyConfig.addPassthroughCopy("views/assets/js");
 
