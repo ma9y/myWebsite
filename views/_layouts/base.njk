@@ -7,11 +7,21 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <title>{{ title }}</title> 
   </head>
-  <body>
-    <main>
+  <body class="flex flex-col min-h-dvh overflow-y-scroll bg-gray-100">
+    <header class="bg-blue-950 border-b-orange-400 border-b-2">
+      <div class="wrapper py-3 text-gray-100 font-semibold">
+      <a href="/">kolfan</a>
+      </div>
+    </header>
+    <main class="flex-1 wrapper py-2">
       {% block content %}
       {{ content | safe }}
       {% endblock %}    
     </main>
+    <footer class="">
+      <div class="wrapper p-3 flex justify-center text-gray-400">
+      &copy; {% year %} kolfan.net
+      </div>
+    </footer>
   </body>
 </html>
