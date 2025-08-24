@@ -1,5 +1,7 @@
 ---
 title: Digital Garden
+layout: base
+permalink: "/{{ page.fileSlug }}/"
 eleventyNavigation:
   key: Digital Garden                   
 ---

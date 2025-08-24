@@ -14,6 +14,28 @@ export default function (eleventyConfig) {
     // PLUGINS
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+    // FILTERS
+    eleventyConfig.addFilter("date", (dateObj, format = "LLL d", locale = "en-GB") => {
+        return DateTime.fromJSDate(dateObj).setLocale(locale).toFormat(format);
+    });
+
+    eleventyConfig.addFilter("dateFromString", (dateObj, format = "DDD", locale = "en-GB") => {
+        return DateTime.fromISO(dateObj).setLocale(locale).toFormat(format);
+    });
+
+    eleventyConfig.addFilter("isBetween", function (date, start, end) {
+        const toDateOnly = d => {
+            const dt = new Date(d);
+            return new Date(dt.getFullYear(), dt.getMonth(), dt.getDate());
+        };
+
+        const d = toDateOnly(date);
+        const startDate = toDateOnly(start);
+        const endDate = toDateOnly(end);
+
+        return d >= startDate && d <= endDate;
+    });
 };
 
 export const config = {

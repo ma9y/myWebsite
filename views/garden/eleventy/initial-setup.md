@@ -1,5 +1,6 @@
 ---
 title: Initial Setup
+templateEngineOverride: md
 eleventyNavigation:
   key: Initial Setup   
   parent: Eleventy 

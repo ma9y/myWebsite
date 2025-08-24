@@ -1,5 +1,5 @@
 {
     "layout": "base",
-    "permalink": "/{{ page.fileSlug }}/",
+    "permalink": "/garden/{{ page.fileSlug }}/",
     "tags": "note"
 }
