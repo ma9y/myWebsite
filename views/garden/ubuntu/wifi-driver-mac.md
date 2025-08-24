@@ -76,15 +76,33 @@ network:
     wlp3s0:
       dhcp4: false
       dhcp6: false
-      addresses: [192.168.5.27/27]
+      # Static IP address for this machine
+      # 198.51.100.27 is an EXAMPLE address (RFC 5737), replace with your own
+      # The "/27" means a subnet mask of 255.255.255.224
+      # ┌───────────────────────── Subnet /27 details ──────────────────────────┐
+      # Network address : 198.51.100.0
+      # First usable    : 198.51.100.1   ← typically your gateway (router)
+      # Last usable     : 198.51.100.30
+      # Broadcast       : 198.51.100.31
+      # Total addresses : 32 (30 usable for hosts)
+      # └───────────────────────────────────────────────────────────────────────┘
+      addresses: [198.51.100.27/27]
+
       nameservers:
-        addresses: [192.168.5.1, 8.8.8.8]
+        # First nameserver is usually your local gateway (router)
+        # Second is a public resolver (here, Google’s 8.8.8.8)
+        addresses: [198.51.100.1, 8.8.8.8]
+
       access-points:
+        # Replace with your Wi-Fi SSID and password
         "YourWiFiSSID":
           password: "YourWiFiPassword"
+
       routes:
+        # Default route: tells the system where to send all non-local traffic
+        # "via" should be your gateway’s IP (router on your subnet)
         - to: default
-          via: 192.168.5.1
+          via: 198.51.100.1
 ```
 
 ```bash
