@@ -25,10 +25,11 @@ sudo shutdown -h +10 # schedule shutdown in 10 minutes
 ```bash
 sudo dpkg-reconfigure console-setup
 ```
-- Choose UTF-8
-- Guess optimal character set
-- Pick Terminus font
-- Select a larger size like 16x32 or 24x48
+Then
+- Choose "UTF-8"
+- Select "Guess optimal character set"
+- Pick "Terminus" font
+- Select a larger size like "16x32" or "24x48"
 - Reboot and the console font will be much larger while keeping the Retina resolution.
 
 ### Import SSH Key from GitHub

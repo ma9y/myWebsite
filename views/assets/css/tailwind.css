@@ -15,3 +15,7 @@ header a {
 h3 {
     @apply text-xl font-semibold mt-8 mb-4;
 }
+
+ul {
+    @apply list-disc list-inside ml-3; 
+}
