@@ -24,3 +24,8 @@ ls -l /home
 ```bash
 ls -la /etc/skel # also lists hidden files
 ```
+
+### Print Lines Matching Patterns
+```bash
+cat /etc/group | grep admin # returns all lines with "admin"
+```
