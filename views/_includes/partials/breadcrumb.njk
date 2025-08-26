@@ -1,0 +1,20 @@
+{% set navPages = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+
+{% for crumb in navPages %}
+{% if loop.first %}
+
+<nav class="">
+
+{% endif %}
+{% if not loop.last %}
+
+<a href="{{ crumb.url }}" class="inline no-underline text-[95%] after:content-['>'] after:text-gray-500">{{ crumb.key }} </a>
+
+{% else %}
+
+<div class="inline text-[95%] text-gray-500">{{ crumb.key }}</div>
+
+</nav>
+
+{% endif %}
+{% endfor %}

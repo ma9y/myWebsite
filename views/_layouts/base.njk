@@ -16,7 +16,11 @@
       <a href="/">log</a>
       </div>
     </header>
-    <main class="flex-1 wrapper py-2">
+    <div class="wrapper">
+      {% block breadcrumb %}
+      {% endblock %}  
+    </div>
+    <main class="flex-1 wrapper py-8">
       {% block content %}
       {{ content | safe }}
       {% endblock %}    

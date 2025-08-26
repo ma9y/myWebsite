@@ -1,0 +1,10 @@
+{% extends "views/_layouts/base.njk" %}
+
+
+{% block breadcrumb %}
+{% include "partials/breadcrumb.njk" %}
+{% endblock %}
+
+{% block content %}
+ {{ content | safe }}
+{% endblock %}

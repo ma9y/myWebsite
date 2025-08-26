@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .wrapper {
-    @apply w-11/12 max-w-3xl mx-auto;
+    @apply w-11/12 max-w-4xl mx-auto;
 }
 
 a {
@@ -13,7 +13,7 @@ header a {
 }
 
 h3 {
-    @apply text-xl font-semibold mt-8 mb-4;
+    @apply text-xl font-semibold mb-4;
 }
 
 ul {
